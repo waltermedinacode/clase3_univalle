@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -9,66 +9,66 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-       <!--Ejemplo ImageView y Resoluciones diferentes -->
+        <!--Ejemplo ImageView y Resoluciones diferentes -->
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/imagen_test"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/imagen_test" />
 
         <!--Ejemplo DataPicker, solo la parte visual -->
-<!--        <DatePicker-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"/>-->
+        <!--        <DatePicker-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"/>-->
 
         <!--Ejemplo TimePicker, solo la parte visual -->
-<!--        <TimePicker-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"/>-->
+        <!--        <TimePicker-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"/>-->
 
         <!--Ejemplo NumberPicker con implementacion-->
         <NumberPicker
             android:id="@+id/numberPicker"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
         <TextView
             android:id="@+id/tvData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            tools:text="valor"
-            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
             android:padding="5dp"
             android:textColor="@color/naranja"
-            android:layout_marginBottom="10dp" />
+            android:textSize="20sp"
+            tools:text="valor" />
 
         <!--Ejemplo ProgressBar Circular, solo la parte visual -->
         <ProgressBar
             android:id="@+id/pbCircular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center" />
 
         <!--Ejemplo ProgressBar Horizontal, con implementacion -->
         <ProgressBar
             android:id="@+id/pbHorizontal"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            style="?android:attr/progressBarStyleHorizontal"
             android:layout_gravity="center"
             android:indeterminate="false"
             android:indeterminateTint="@color/naranja"
             android:max="100"
-            android:progress="5"/>
+            android:progress="5" />
 
         <!--Ejemplo SeekBar,con implementacion -->
         <SeekBar
             android:id="@+id/sbStandar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="15dp" />
 
         <!--Ejemplo SeekBar Discrete, solo la parte visual -->
         <SeekBar
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:max="10"
-            android:progress="3"/>
+            android:progress="3" />
 
         <!--Ejemplo RatingBar, con implementación -->
         <RatingBar
@@ -87,13 +87,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:numStars="5"
-            android:rating="2"
             android:progressTint="@color/amarillo"
+            android:rating="2"
             android:stepSize="0.5" />
 
-
         <!--Contenedor Linear Layout, sus componentes se ubicaran de manera horizontal -->
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,18 +103,19 @@
                 android:id="@+id/btnWebView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/webview"
-                android:layout_marginEnd="20dp" />
+                android:layout_marginEnd="20dp"
+                android:text="@string/webview" />
 
             <Button
-                android:id="@+id/btnSearchView"
+                android:id="@+id/btnCall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SearchView" />
+                android:backgroundTint="@color/green"
+                android:drawablePadding="8dp"
+                android:text="@string/llamar"
+                app:icon="@drawable/ic_call" />
 
         </LinearLayout>
-
-
 
     </LinearLayout>
 </layout>

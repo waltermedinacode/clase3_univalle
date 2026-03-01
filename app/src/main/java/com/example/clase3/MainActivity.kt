@@ -9,6 +9,7 @@ import com.example.clase3.databinding.ActivityMainBinding
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.lang.Thread.sleep
+import androidx.core.net.toUri
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         seekBarStandar()
         ratingBar()
         irAWebView()
-        irASearchView()
+        call()
     }
 
     private fun numberPicker(){
@@ -67,10 +68,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-    private fun irASearchView(){
-        binding.btnSearchView.setOnClickListener {
-            val intent = Intent(this, SearchView::class.java)
+    private fun call(){
+        binding.btnCall.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = "tel:3127030308".toUri()
             startActivity(intent)
         }
     }
