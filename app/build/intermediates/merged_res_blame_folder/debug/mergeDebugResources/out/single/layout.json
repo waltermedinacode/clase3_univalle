@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.example.clase3.app-mergeDebugResources-35:/layout/activity_main.xml",
+        "source": "com.example.clase3.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.clase3.app-mergeDebugResources-35:/layout/activity_web_view.xml",
+        "source": "com.example.clase3.app-main-38:/layout/activity_web_view.xml"
+    }
+]
